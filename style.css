@@ -1,0 +1,562 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #e0f2f1; 
+}
+  
+.logo img {
+    max-width:220px ;
+}
+  
+.navBar {
+    display: flex;
+    gap: 20px;
+}
+  
+.navBar a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #00796b; /* Calming teal for text */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+  
+.navBar a:hover {
+    color: #004d40; /* Darker shade on hover */
+}
+  
+.headeeContact {
+    display: flex;
+    align-items: center;
+}
+
+.headeeContact h2 {
+    color: #004d40;
+    font-size: 1.6em;
+    margin-right: 15px;
+}
+  
+.headeeContact button {
+    width: 200px;
+    font-size: 15px !important;
+    font-weight: 550 !important;
+    background-color: #00796b; /* Main button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+}
+  
+.headeeContact button:hover {
+    background-color: #004d40; /* Darker on hover */
+}
+
+.mainImg {
+    position: relative;
+    background: url('img/5226955743486405157.jpg') no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    width: 900px;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.mainImg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+    border-radius: 20px;
+}
+
+.mainImg p {
+    text-align: center;
+    line-height:110px;
+    position: relative;
+    z-index: 2; 
+    color: white;
+    padding: 20px;
+    font-size: 55px;
+    font-weight: 550;
+}
+
+.aboutContainer {
+    display: flex;
+    background-color: #f0f8f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 1100px;
+    margin: 20px auto;
+}
+
+.aboutContainer img {
+    min-width: 500px;
+    height: auto;
+    border-radius: 10px 0 0 10px;
+}
+
+.aboutContent {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #333;
+}
+
+.aboutContent p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.aboutContent button {
+    font-size: 25px;
+    font-weight: 600;
+    width: 300px;
+    line-height: 30px;
+    background-color: #66cdaa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin:  0 auto;
+}
+
+.aboutContent button:hover {
+    background-color: #5abf9a;
+}
+
+.title {
+    font-size: 35px;
+    font-weight: 550;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.servicesContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.serviceCard {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 10px;
+    width: 300px;
+    transition: transform 0.3s;
+}
+
+.serviceCard:hover {
+    transform: scale(1.05);
+}
+
+.serviceCard img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.serviceContent {
+    padding: 15px;
+    text-align: center;
+    color: #333;
+}
+
+.serviceContent h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.serviceContent p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.serviceContent button {
+    font-size: 20px;
+    font-weight: 600;
+    width: 100%;
+    background-color: #66cdaa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.serviceContent button:hover {
+    background-color: #5abf9a;
+}
+
+.blog {
+    margin: 20px 0;
+    margin-top: 20px;
+}
+
+.blogContainer {
+    padding-top: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between posts */
+}
+
+.contactForm {
+    background-color: #f0f8f7;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contactForm .title {
+    font-size: 30px;
+    font-weight: 550;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formGroup {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    font-size: 20px;
+    font-weight: 600;
+    width: 100%;
+    background-color: #66cdaa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #5abf9a;
+}
+
+.blogPost {
+    display: flex;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.blogPost:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.blogPost img {
+    width: 120px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+.blogContent {
+    padding: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #333;
+}
+
+.blogContent h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.blogContent p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.blogContent button {
+    font-size: 18px;
+    font-weight: 600;
+    width: fit-content;
+    background-color: #66cdaa;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.blogContent button:hover {
+    background-color: #5abf9a;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e0f7fa;
+}
+@media (max-width: 768px) {
+    .navBar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .headeeContact h2 {
+        font-size: 1.2em;
+    }
+
+    .mainImg {
+        height: 300px;
+        width: 100%;
+    }
+
+    .aboutContainer {
+        flex-direction: column;
+    }
+
+    .aboutContainer img {
+        min-width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .servicesContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .serviceCard {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .blogContainer {
+        padding: 10px;
+    }
+
+    .contactForm {
+        width: 100%;
+        padding: 10px;
+    }
+}
+.advantages {
+
+    padding: 40px; /* Увеличенный отступ */
+    margin: 20px 0;
+  
+    border-radius: 8px;
+ 
+}
+
+
+
+.advantages h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out; /* Анимация появления заголовка */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.advantage-item {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    text-align: center;
+    transform: translateY(10px); 
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease; 
+    animation: slideIn 0.5s forwards; 
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.advantage-item h3 {
+    font-size: 20px;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.advantage-item p {
+    font-size: 16px;
+    color: #555;
+}
+
+.partners {
+    background-color: #fff;
+    padding: 40px; 
+    margin: 20px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    transform: translateY(0);
+    transition: transform 0.3s ease; 
+}
+
+
+
+.partners h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.partners p {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px; /* Увеличенный пробел между логотипами */
+}
+
+.partner-logos img {
+    max-width: 120px; /* Увеличенная максимальная ширина логотипа */
+    height: auto;
+    opacity: 0; /* Начальная непрозрачность логотипов */
+    transform: translateY(20px); /* Начальная позиция для анимации */
+    animation: fadeInLogo 0.5s forwards; /* Анимация появления логотипов */
+    animation-delay: 0.2s; /* Задержка перед анимацией */
+}
+
+@keyframes fadeInLogo {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.contacts {
+    background-color: #f0f8f7; /* Light background for contrast */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.title {
+    font-size: 35px;
+    font-weight: 550;
+    margin-bottom: 15px;
+    color: #00796b; /* Main title color */
+}
+
+.contact-info {
+    margin-bottom: 20px;
+    color: #333; /* Dark text for readability */
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: #00796b; /* Link color */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #004d40; /* Darker color on hover */
+}
+
+.social-media {
+    margin-top: 15px;
+}
+
+.social-media h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #00796b; /* Subtitle color */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between icons */
+}
+
+.social-icons a {
+    font-size: 30px; /* Size for social icons */
+    color: #00796b; /* Social icon color */
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #004d40; /* Darker shade on hover */
+}
