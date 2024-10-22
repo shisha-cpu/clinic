@@ -1,0 +1,76 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7fa; /* основной цвет */
+}
+
+main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 2.5em; /* Larger font size for the title */
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between items */
+}
+
+.service-item {
+    background-color: #fff; /* Clean white background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    position: relative; /* For pseudo-element positioning */
+}
+
+.service-item:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}
+
+.icon {
+    font-size: 50px; /* Increase icon size */
+    color: #00796b; /* Icon color */
+    margin-bottom: 10px;
+}
+
+h2 {
+    color: #004d40;
+    margin: 10px 0;
+    font-size: 1.8em; /* Larger font size for subheadings */
+}
+
+p {
+    color: #34495e;
+    font-size: 1.1em; /* Slightly larger text for paragraphs */
+    margin: 0; /* Remove default margin */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em; /* Adjust title size on smaller screens */
+    }
+
+    h2 {
+        font-size: 1.5em; /* Adjust subheading size */
+    }
+
+    .service-item {
+        padding: 15px; /* Adjust padding on smaller screens */
+    }
+
+    .icon {
+        font-size: 40px; /* Decrease icon size for smaller screens */
+    }
+}

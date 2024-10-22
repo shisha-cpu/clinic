@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | BioGenPharma</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="header-placeholder"></div>
+
+    <section class="intro">
+        <h1>Контакты</h1>
+    </section>
+
+    <main>
+        <section class="contact-details">
+            <div class="contact-info">
+                <h2>Свяжитесь с нами</h2>
+                <ul>
+                    <li><strong>Адрес:</strong> 050000, Республика Казахстан, г. Алматы, проспект Н.Назарбаева 28А, офис 131</li>
+                    <li><strong>Телефон:</strong> <a href="tel:+77072441717">+7 707 244 17 17</a></li>
+                    <li><strong>Email:</strong> <a href="mailto:info@bgp.com">info@BGP.com</a></li>
+                    <li><strong>Сайт:</strong> <a href="https://www.bgp.com" target="_blank">www.bgp.com</a></li>
+                    <li><strong>Сайт:</strong> <a href="https://www.biogenpharma.com" target="_blank">www.biogenpharma.com</a></li>
+                </ul>
+            </div>
+
+            <div class="map-container">
+                <h2>Мы на карте</h2>
+                <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/162/almaty/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Алматы</a><a href="https://yandex.ru/maps/162/almaty/house/nazarbaev_dangghyly_28a/Y08YfwNlTEQHQFppfX52cH1gYg==/?ll=76.945510%2C43.271136&utm_medium=mapframe&utm_source=maps&z=17" style="color:#eee;font-size:12px;position:absolute;top:14px;">Проспект Назарбаева, 28А на карте Алматы, ближайшее метро Райымбек батыра — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=76.945510%2C43.271136&mode=whatshere&whatshere%5Bpoint%5D=76.945510%2C43.271136&whatshere%5Bzoom%5D=17&z=17" width="1060" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+            </div>
+        </section>
+    </main>
+
+
+    <script>
+ 
+
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('.header-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

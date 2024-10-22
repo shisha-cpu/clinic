@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="header.css">
+    <title>Наши услуги | BioGenPharma</title>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <main>
+        <h1>Наши услуги</h1>
+        <section class="services">
+            <div class="service-item">
+                <div class="icon">&#x1F5C3;</div> <!-- Icon for registration -->
+                <h2>Регистрация препаратов</h2>
+                <p>Мы занимаемся полным процессом регистрации дженериковых препаратов благодаря партнерству со специалистами в данной области, начиная от подачи документов до получения всех необходимых разрешений.</p>
+            </div>
+            <div class="service-item">
+                <div class="icon">&#x1F4C8;</div> <!-- Icon for regulation -->
+                <h2>Регуляция</h2>
+                <p>Мы следим за соблюдением всех регуляторных норм и требований, адаптируемся к изменениям в законодательстве и обеспечиваем, чтобы наши продукты соответствовали самым высоким стандартам качества и безопасности.</p>
+            </div>
+            <div class="service-item">
+                <div class="icon">&#x1F4E6;</div> <!-- Icon for marketing -->
+                <h2>Маркетинг</h2>
+                <p>Мы разрабатываем и внедряем эффективные маркетинговые стратегии, направленные на продвижение наших препаратов на рынке, основываясь на тщательном анализе рынка и потребностей клиентов.</p>
+            </div>
+            <div class="service-item">
+                <div class="icon">&#x1F4B8;</div> <!-- Icon for market access -->
+                <h2>Market Access</h2>
+                <p>Мы обеспечиваем доступность наших препаратов через участие в государственных тендерах и программы поддержки пациентов, стремясь предоставить качественные медицинские решения для всех слоев населения.</p>
+            </div>
+            <div class="service-item">
+                <div class="icon">&#x1F4E6;</div> <!-- Icon for distribution -->
+                <h2>Дистрибуция</h2>
+                <p>Мы организуем логистику и распределение наших препаратов по всей территории Казахстана, сотрудничая с надежными логистическими партнерами для гарантии качества и своевременности доставки.</p>
+            </div>
+        </section>
+    </main>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="advantages.css">
+    <link rel="stylesheet" href="header.css">
+    <title>Конкурентные преимущества | BioGenPharma</title>
+</head>
+<body>
+    <div class="header-placeholder"></div>
+    <section class="intro">
+        <h1>Наши конкурентные преимущества</h1>
+    </section>
+    <main>
+        <section class="advantages">
+            <div class="advantage-item">
+                <h2>Высококвалифицированная команда</h2>
+                <p>Наша команда состоит из специалистов с многолетним опытом в фармацевтической отрасли. Это позволяет нам обеспечивать высокий уровень профессионализма и компетенции во всех наших процессах.</p>
+            </div>
+
+            <div class="advantage-item">
+                <h2>Полный цикл услуг</h2>
+                <p>Мы предоставляем полный спектр услуг от регистрации до дистрибуции, что делает нас надежным партнером для наших клиентов и партнеров. Мы берем на себя все этапы работы, обеспечивая высокое качество и оперативность выполнения задач.</p>
+            </div>
+
+            <div class="advantage-item">
+                <h2>Международное сотрудничество</h2>
+                <p>Мы активно сотрудничаем с ведущими фармацевтическими компаниями из Европы, Китая, Пакистана, Индии и США. Это помогает внедрять лучшие практики и передовые технологии на рынке Казахстана.</p>
+            </div>
+        </section>
+    </main>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('.header-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

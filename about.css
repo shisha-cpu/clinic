@@ -1,8 +1,43 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #e0f7fa;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #e0f7fa; /* основной цвет */
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+h2 {
+    border-bottom: 2px solid #00796b; /* accent line under h2 */
+    padding-bottom: 10px;
+    color: #004d40;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+p {
+    color: #34495e;
+    margin: 10px 0;
+}
+
+strong {
+    color: #e74c3c;
 }
 
 header {
@@ -10,7 +45,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #e0f2f1;
+    background-color: #e0f2f1; 
 }
 
 .logo img {
@@ -25,82 +60,47 @@ header {
 .navBar a {
     text-decoration: none;
     font-size: 20px;
-    color: #00796b;
+    color: #00796b; /* Calming teal for text */
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .navBar a:hover {
+    color: #004d40; /* Darker shade on hover */
+}
+
+.headeeContact {
+    display: flex;
+    align-items: center;
+}
+
+.headeeContact h2 {
     color: #004d40;
+    font-size: 1.6em;
+    margin-right: 15px;
 }
 
-.heroImage {
-    position: relative;
-    background: url('hero.jpg') no-repeat center center;
-    background-size: cover;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.headeeContact button {
+    width: 200px;
+    font-size: 15px !important;
+    font-weight: 550 !important;
+    background-color: #00796b; 
     color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
 }
 
-.heroImage h1 {
-    font-size: 48px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+.headeeContact button:hover {
+    background-color: #004d40; /* Darker on hover */
 }
 
-.section {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.section h2 {
-    text-align: center;
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.content {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.content img {
-    width: 300px;
+/* Additional styling for better layout */
+section {
+    background-color: #f9f9f9; /* Light background for sections */
+    padding: 15px;
     border-radius: 10px;
-    margin-right: 20px;
-}
-
-.content p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #555;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #00796b;
-    color: white;
-}
-
-@media (max-width: 768px) {
-    .content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .content img {
-        width: 100%;
-        margin: 0 0 20px 0;
-    }
-
-    .heroImage h1 {
-        font-size: 32px;
-    }
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }

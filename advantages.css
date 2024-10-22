@@ -1,0 +1,108 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* светлый фон */
+    color: #333;
+}
+
+.intro {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('https://images.unsplash.com/photo-1504812448291-b7fe3fb13239?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fG1lZGljaW5lfGVufDB8fHx8MTYzNjk3MTk5NA&ixlib=rb-1.2.1&q=80&w=1080') center/cover no-repeat;
+    color: white;
+    position: relative;
+}
+
+.intro::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00796b;
+    z-index: 1;
+}
+
+.intro h1 {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    z-index: 2;
+    position: relative;
+    color: white;
+    margin: 0;
+    animation: slide-in 1.5s ease-out;
+}
+
+/* Анимация заголовка */
+@keyframes slide-in {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+main {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.advantages {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.advantage-item {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+}
+
+.advantage-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.advantage-item h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #00796b;
+    position: relative;
+    z-index: 1;
+}
+
+.advantage-item p {
+    font-size: 1.2rem;
+    color: #555;
+    position: relative;
+    z-index: 1;
+}
+
+/* Медиа-запросы для адаптации */
+@media (max-width: 992px) {
+    .advantages {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .advantages {
+        grid-template-columns: 1fr;
+    }
+
+    .intro h1 {
+        font-size: 2.5rem;
+    }
+}
