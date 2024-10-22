@@ -1,18 +1,209 @@
 <header>
     <div class="logo">
-        <img src="./img/Лого BioGenPharma.png" alt="logo">
+        <a href="/"> <img src="./img/Лого BioGenPharma.png" alt="logo"></a>
     </div>
     <nav class="navBar">
-        <a href="/clinic">Главная</a>
+        <a href="/clinic">Домашняя страница</a>
         <a href="/clinic/about.html">О нас</a>
-        <a href="/clinic/services.html">Наши услуги</a>
-        <a href="/clinic/market-access.html">Market Access</a>
-        <a href="/clinic/team-page.html">Команда</a>
-        <a href="/clinic/advantages.html">Конкурентные преимущества</a>
+        <a href="/clinic/services.html">Услуги/продукты</a>
         <a href="/clinic/contact.html">Контакты</a>
+        <!-- <a href="/">Домашняя страница</a>
+        <a href="/about.html">О нас</a>
+        <a href="/services.html">Услуги/продукты</a>
+        <a href="/contact.html">Контакты</a> -->
+        <!-- <a href="/blog.html">Блог</a> -->
     </nav>
     <div class="headerContact">
         <h2>+7 (707) 244-1717</h2>
-        <button>Получить консультацию</button>
+        <button id="consultationButton">Получить консультацию</button>
     </div>
 </header>
+
+<!-- Модальное окно -->
+<div id="consultationModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2>Получить консультацию</h2>
+        <form id="consultationForm">
+            <label for="name">Имя:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Телефон:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <input type="submit" value="Отправить">
+        </form>
+    </div>
+</div>
+
+<style>
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #e0f2f1; 
+}
+
+.logo img {
+    max-width: 220px;
+}
+
+.navBar {
+    display: flex;
+    gap: 20px;
+}
+
+.navBar a {
+    text-decoration: none;
+    font-size: 25px;
+    color: rgb(174,74,132); /* Calm teal for text */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navBar a:hover {
+    color: rgb(0,160,227); /* Darker shade on hover */
+}
+
+.headerContact {
+    display: flex;
+    align-items: center;
+}
+
+.headerContact h2 {
+    color: #004d40;
+    font-size: 1.6em;
+    margin-right: 15px;
+}
+
+.headerContact button {
+    width: 200px;
+    font-size: 15px;
+    font-weight: 550;
+    background-color: #00796b; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.headerContact button:hover {
+    background-color: #004d40; /* Darker on hover */
+}
+
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; 
+    z-index: 100; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px; 
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="tel"] {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #00796b; 
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #004d40; 
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navBar {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .navBar a {
+        font-size: 20px;
+    }
+
+    .headerContact {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .headerContact h2 {
+        font-size: 1.4em;
+        margin-bottom: 10px;
+    }
+
+    .headerContact button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navBar a {
+        font-size: 18px;
+    }
+
+    .headerContact h2 {
+        font-size: 1.2em;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    .headerContact button {
+        padding: 8px;
+    }
+}
+</style>

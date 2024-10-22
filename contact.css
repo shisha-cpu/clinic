@@ -108,4 +108,54 @@ main {
     .contact-info, .map-container {
         flex: 1 1 100%;
     }
+
+    .intro h1 {
+        font-size: 2.5rem; /* Уменьшаем размер заголовка на мобильных */
+    }
+}
+
+@media (max-width: 768px) {
+    .intro {
+        padding: 80px 10px; /* Уменьшаем отступы на мобильных */
+    }
+
+    .intro h1 {
+        font-size: 2rem; /* Уменьшаем размер заголовка */
+    }
+
+    .contact-info h2 {
+        font-size: 1.5rem; /* Уменьшаем размер подзаголовков */
+    }
+
+    .contact-info li {
+        font-size: 1rem; /* Уменьшаем размер текста */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info {
+        padding: 20px; /* Уменьшаем внутренние отступы */
+    }
+
+    .map-container h2 {
+        font-size: 1.5rem; /* Уменьшаем размер заголовка карты */
+    }
+
+    #map {
+        height: 300px; /* Уменьшаем высоту карты на маленьких экранах */
+    }
+}
+.map-links {
+    color: #eee;
+    font-size: 12px;
+    position: absolute;
+}
+
+.map-links a {
+    color: #eee;
+    text-decoration: none;
+}
+
+.map-links a:hover {
+    text-decoration: underline;
 }

@@ -29,20 +29,89 @@
 
             <div class="map-container">
                 <h2>Мы на карте</h2>
-                <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/162/almaty/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Алматы</a><a href="https://yandex.ru/maps/162/almaty/house/nazarbaev_dangghyly_28a/Y08YfwNlTEQHQFppfX52cH1gYg==/?ll=76.945510%2C43.271136&utm_medium=mapframe&utm_source=maps&z=17" style="color:#eee;font-size:12px;position:absolute;top:14px;">Проспект Назарбаева, 28А на карте Алматы, ближайшее метро Райымбек батыра — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=76.945510%2C43.271136&mode=whatshere&whatshere%5Bpoint%5D=76.945510%2C43.271136&whatshere%5Bzoom%5D=17&z=17" width="1060" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                <div style="position: relative; overflow: hidden;">
+                    <a href="https://yandex.ru/maps/162/almaty/?utm_medium=mapframe&utm_source=maps" 
+                       style="color: #eee; font-size: 12px; position: absolute; top: 0px;" target="_blank">Алматы</a>
+                    <a href="https://yandex.ru/maps/162/almaty/house/nazarbaev_dangghyly_28a/Y08YfwNlTEQHQFppfX52cH1gYg==/?ll=76.945510%2C43.271136&utm_medium=mapframe&utm_source=maps&z=17" 
+                       style="color: #eee; font-size: 12px; position: absolute; top: 14px;" target="_blank">Проспект Назарбаева, 28А на карте Алматы, ближайшее метро Райымбек батыра — Яндекс Карты</a>
+                    <iframe src="https://yandex.ru/map-widget/v1/?ll=76.945510%2C43.271136&mode=whatshere&whatshere%5Bpoint%5D=76.945510%2C43.271136&whatshere%5Bzoom%5D=17&z=17" 
+                            width="100%" height="400" frameborder="1" allowfullscreen="true" style="border: none; position: relative;"></iframe>
+                </div>
+                
             </div>
         </section>
     </main>
 
 
     <script>
- 
-
-        fetch('header.html')
-            .then(response => response.text())
+        
+document.addEventListener("DOMContentLoaded", function() {
+    fetch('header.html')
+    .then(response => response.text())
+    .then(data => {
+        document.querySelector('.header-placeholder').innerHTML = data;
+    
+        const modal = document.getElementById("consultationModal");
+        const btn = document.getElementById("consultationButton");
+        const span = document.getElementById("closeModal");
+        const form = document.getElementById("consultationForm");
+    
+        // Open modal
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+    
+        // Close modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+    
+        // Close modal on outside click
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    
+        // Handle form submission
+        form.onsubmit = function(event) {
+            event.preventDefault(); // Prevent default form submission
+    
+            const name = document.getElementById("name").value;
+            const phone = document.getElementById("phone").value;
+    
+            // Replace with your actual Telegram bot token and chat ID
+            const telegramBotToken = '7812057575:AAH4af-MTD4MP6NTK9C3CPrZZYRErq0QwVI';
+            const chatId = '1137493485';
+            const message = `Имя: ${name}\nТелефон: ${phone}`;
+    
+            fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message,
+                }),
+            })
+            .then(response => response.json())
             .then(data => {
-                document.querySelector('.header-placeholder').innerHTML = data;
+                if (data.ok) {
+                    alert('Ваше сообщение отправлено!');
+                    modal.style.display = "none"; // Close modal after submission
+                    form.reset(); // Reset form fields
+                } else {
+                    alert('Ошибка при отправке сообщения.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Ошибка при отправке сообщения.');
             });
+        }
+    });
+})
     </script>
 </body>
 </html>
