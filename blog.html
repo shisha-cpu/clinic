@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог | BioGenPharma</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <div class="header-placeholder"></div>
+
+    <section class="intro">
+        <h1>Блог</h1>
+    </section>
+
+    <main>
+        <article class="blog-post">
+            <h2>Заголовок поста 1</h2>
+            <p>Краткое содержание поста 1. Здесь можно написать об основных темах и идеях, которые будут обсуждаться в этом посте. <a href="#">Читать далее...</a></p>
+        </article>
+
+        <article class="blog-post">
+            <h2>Заголовок поста 2</h2>
+            <p>Краткое содержание поста 2. Интересные факты и советы, которые могут помочь читателям. <a href="#">Читать далее...</a></p>
+        </article>
+
+        <article class="blog-post">
+            <h2>Заголовок поста 3</h2>
+            <p>Краткое содержание поста 3. Обсуждение актуальных вопросов и тем, важных для нашей аудитории. <a href="#">Читать далее...</a></p>
+        </article>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('.header-placeholder').innerHTML = data;
+            });
+        });
+        fetch('http://62.217.181.247:4445/data')
+    .then(res => res.json()) // Преобразуем ответ в JSON
+    .then(data => console.log(data)) // Логируем полученные данные
+    .catch(error => console.error('Ошибка:', error));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8;
+    color: #333;
+}
+
+.intro {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #00796b;
+    color: white;
+}
+
+.intro h1 {
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    margin: 0;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+main {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.blog-post {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.blog-post:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.blog-post h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.blog-post p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.blog-post a {
+    color: #00796b;
+    text-decoration: none;
+}
+
+.blog-post a:hover {
+    text-decoration: underline;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 992px) {
+    .intro h1 {
+        font-size: 2.5rem; /* Уменьшаем размер заголовка на мобильных */
+    }
+}
+
+@media (max-width: 768px) {
+    .intro {
+        padding: 80px 10px; /* Уменьшаем отступы на мобильных */
+    }
+
+    .intro h1 {
+        font-size: 2rem; /* Уменьшаем размер заголовка */
+    }
+
+    .blog-post h2 {
+        font-size: 1.5rem; /* Уменьшаем размер подзаголовков */
+    }
+
+    .blog-post p {
+        font-size: 1rem; /* Уменьшаем размер текста */
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-post {
+        padding: 20px; /* Уменьшаем внутренние отступы */
+    }
+}
