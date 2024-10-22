@@ -90,7 +90,7 @@ main {
     z-index: 1;
 }
 
-/* Медиа-запросы для адаптации */
+
 @media (max-width: 992px) {
     .advantages {
         grid-template-columns: 1fr 1fr;
